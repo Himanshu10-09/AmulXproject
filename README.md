@@ -1,6 +1,4 @@
-# amulx
-
-A new Flutter project.
+# AmulX
 
 ![Register Page](https://github.com/Himanshu10-09/AmulXproject/assets/169130491/49d500bc-29e8-4c6b-b11e-e40dd0716164)
 
