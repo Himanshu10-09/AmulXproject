@@ -1,4 +1,5 @@
 import 'package:amulx/AuthenticationPages/auth_service.dart';
+import 'package:amulx/AuthenticationPages/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 
@@ -119,11 +120,20 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.only(left: 200,),
-                        child: TextButton(onPressed: () {},
-                            child: Text('Forgot Password?',style: TextStyle(color: Color(0xff191970)))
-                        )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3,bottom: 12,right: 10),
+                          child: TextButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return ForgotPasswordPage();
+                            }));
+                          },
+                              child: Text('Forgot Password?',style: TextStyle(color: Color(0xff191970)))
+                          ),
+                        ),
+                      ],
                     ),
                     Center(child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -147,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                           SizedBox(width: 5,),
                           GestureDetector(
                             onTap: widget.showRegisterPage,
-                              child: Text('Register Now',style: TextStyle(color: Color(0xff191970)),)),
+                              child: Text('Register Now',style: TextStyle(color: Color(0xff191970),fontWeight: FontWeight.bold),)),
                         ],
                       ),
                     )
